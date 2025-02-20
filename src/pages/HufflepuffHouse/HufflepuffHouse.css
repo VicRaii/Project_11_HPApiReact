@@ -1,0 +1,13 @@
+.hufflepuffhouse {
+  height: 100vh;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--p11-hufflepuff-black),
+    var(--p11-hufflepuff-black) 3px,
+    var(--p11-hufflepuff-yellow) 3px,
+    var(--p11-hufflepuff-yellow) 90px,
+    var(--p11-hufflepuff-black) 9px,
+    var(--p11-hufflepuff-black) 10px,
+    var(--p11-hufflepuff-yellow) 20px
+  );
+}

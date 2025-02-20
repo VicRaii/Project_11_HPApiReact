@@ -1,0 +1,15 @@
+.slytherinhouse {
+  width: 100%;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--p11-slytherin-silver),
+    var(--p11-slytherin-silver) 3px,
+    var(--p11-slytherin-green) 3px,
+    var(--p11-slytherin-green) 90px,
+    var(--p11-slytherin-silver) 9px,
+    var(--p11-slytherin-silver) 10px,
+    var(--p11-slytherin-green) 10px,
+    var(--p11-slytherin-green) 30px
+  );
+}

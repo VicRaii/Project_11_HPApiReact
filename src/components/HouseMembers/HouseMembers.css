@@ -1,0 +1,66 @@
+.house {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--p11-gap-xl);
+  position: relative;
+  z-index: 99999999999999;
+}
+
+.house > h1 {
+  width: 100%;
+  height: 10svh;
+  text-align: center;
+  margin-top: var(--p11-margin-m);
+  color: var(--p11-gryffindor-gold);
+  text-shadow: 6px 10px 0px rgba(0, 0, 0, 0.55);
+  -webkit-text-stroke: 0.1px black;
+  font-size: 70px;
+}
+
+/* Contenedor de personajes */
+.house_container {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  margin: 0 auto;
+  display: flex;
+  gap: var(--p11-gap-l);
+  flex-wrap: wrap;
+}
+
+/* Tarjetas */
+.house_card {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 0;
+}
+
+.house_card > li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.house_card > li:nth-child(1) {
+  height: 15%;
+  display: grid;
+  place-content: center;
+  font-size: var(--p11-font-size-m);
+}
+
+.house_card > li:nth-child(2) {
+  height: 85%;
+}
+
+@media (max-width: 500px) {
+  .house > h1 {
+    font-size: 50px;
+  }
+}

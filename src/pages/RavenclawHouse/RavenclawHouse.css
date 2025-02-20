@@ -1,0 +1,14 @@
+.ravenclawhouse {
+  height: 100vh;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--p11-ravenclaw-bronze),
+    var(--p11-ravenclaw-bronze) 3px,
+    var(--p11-ravenclaw-blue) 3px,
+    var(--p11-ravenclaw-blue) 90px,
+    var(--p11-ravenclaw-bronze) 9px,
+    var(--p11-ravenclaw-bronze) 10px,
+    var(--p11-ravenclaw-blue) 10px,
+    var(--p11-ravenclaw-blue) 30px
+  );
+}
