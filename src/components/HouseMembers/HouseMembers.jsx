@@ -63,18 +63,13 @@ const HouseMembers = ({ houseName }) => {
                     <FaSyncAlt />
                   </div>
                   {showHint && (
-                    <div className='hint'>¡Haz clic para ver más!</div>
+                    <div className='hint'>Click to see more info</div>
                   )}
                 </div>
                 <div className='card_back'>
                   <h2>{character.alternate_names[0]}</h2>
-                  <h4>Date of Birth: {character.dateOfBirth}</h4>
-                  <h4>Ancestry: {character.ancestry}</h4>
-                  {/* <h4>
-                    Wand: Wood: {character.wand.wood}, Core:{' '}
-                    {character.wand.core}, Length: {character.wand.length}
-                  </h4> */}
-
+                  <h4>Date of Birth: {character.dateOfBirth || 'Unknown'}</h4>
+                  <h4>Ancestry: {character.ancestry || 'Unknown'}</h4>
                   <p>Actor: {character.actor}</p>
                 </div>
               </div>

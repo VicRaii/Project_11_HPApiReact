@@ -1,7 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/harry-p');
 
 :root {
-  /* Colores de las casas */
   --p11-gryffindor-red: #740001;
   --p11-gryffindor-gold: #d3a625;
   --p11-hufflepuff-yellow: #c6a513;
@@ -11,13 +10,7 @@
   --p11-slytherin-green: #1a472a;
   --p11-slytherin-silver: #acacac;
 
-  /* Colores mágicos */
   --p11-dark-forest: #0d1b2a;
-  --p11-hogwarts-stone: #5a5a5a;
-  --p11-parchment-paper: #faf3e0;
-  --p11-wand-brown: #6f4e37;
-  --p11-spell-purple: #5d3fd3;
-  --p11-golden-snitch: #ffd700;
 
   --p11-font-size-xs: 10px;
   --p11-font-size-s: 15px;
