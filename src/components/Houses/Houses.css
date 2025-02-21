@@ -81,6 +81,15 @@
   color: var(--p11-slytherin-silver);
 }
 
+/* Media queries para pantallas grandes */
+@media (min-width: 1200px) {
+  .house_Link {
+    max-width: 170px;
+    min-height: 384px;
+  }
+}
+
+/* Media queries para pantallas medianas */
 @media (max-width: 850px) {
   .main_page h1 {
     font-size: 70px;
@@ -98,23 +107,26 @@
     display: grid;
     place-content: center;
   }
+
   .houseFlag {
     border: none;
     height: 150px; /* Ajustar la altura de las banderas de las casas */
   }
+
   #Gryffindor {
     background-image: url('https://raw.githubusercontent.com/NestorPlasencia/img/master/Gryffindor.png');
     color: var(--p11-gryffindor-gold);
   }
 }
-/* Cambiar el fondo a mas borroso  */
 
+/* Media queries para pantallas pequeñas */
 @media (max-width: 500px) {
   .main_page h1 {
     font-size: var(--p11-font-size-xxl);
     width: 95%;
     height: 12svh;
   }
+
   .house_Link {
     width: 100%; /* Ajustar el ancho de los enlaces de las casas */
   }

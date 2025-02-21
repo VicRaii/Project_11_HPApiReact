@@ -52,3 +52,14 @@
   text-shadow: 2px 4px 0px rgba(0, 0, 0, 0.55);
   -webkit-text-stroke: 0.1px rgb(0, 0, 0);
 }
+
+.card_back {
+  background: linear-gradient(135deg, #1a1a1a, #444);
+  color: var(--p11-gryffindor-gold);
+  transform: rotateY(180deg);
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  opacity: 0.9;
+  font-size: var(--p11-font-size-m);
+}
