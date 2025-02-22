@@ -1,0 +1,17 @@
+.card_back div {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card_back h2 {
+  font-size: var(--p11-font-size-xl);
+}
+
+.card_back h4 {
+  font-size: var(--p11-font-size-m);
+}
+
+.card_back p {
+  font-size: var(--p11-font-size-m);
+}

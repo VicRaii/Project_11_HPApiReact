@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   gap: var(--p11-gap-m);
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  flex-wrap: wrap;
 }
 
 .house_Link {
@@ -53,7 +53,7 @@
 
 .houseFlag > h2 {
   width: 100%;
-  font-size: var(--p11-font-size-l);
+  font-size: var(--p11-font-size-xl);
 }
 
 #Gryffindor {
@@ -65,7 +65,6 @@
 #Hufflepuff {
   background-color: var(--p11-hufflepuff-yellow);
   background-image: url('https://raw.githubusercontent.com/NestorPlasencia/img/master/Hufflepuff.png');
-  backdrop-filter: blur(10px);
   color: var(--p11-hufflepuff-black);
 }
 
@@ -81,7 +80,6 @@
   color: var(--p11-slytherin-silver);
 }
 
-/* Media queries para pantallas grandes */
 @media (min-width: 1200px) {
   .house_Link {
     max-width: 170px;
@@ -89,7 +87,6 @@
   }
 }
 
-/* Media queries para pantallas medianas */
 @media (max-width: 850px) {
   .main_page h1 {
     font-size: 70px;
@@ -97,29 +94,28 @@
   }
 
   .house_Link {
-    width: 45%; /* Ajustar el ancho de los enlaces de las casas */
-    margin-bottom: var(--p11-gap-m); /* Espacio entre filas */
+    width: 45%;
+    margin-bottom: var(--p11-gap-m);
   }
 
   .houseFlag > h2 {
-    height: 80%;
+    height: 90%;
     font-size: var(--p11-font-size-xxl);
     display: grid;
     place-content: center;
+    -webkit-text-stroke: 0.4px var(--p11-dark-forest);
   }
 
   .houseFlag {
     border: none;
-    height: 150px; /* Ajustar la altura de las banderas de las casas */
+    height: 150px;
   }
 
-  #Gryffindor {
-    background-image: url('https://raw.githubusercontent.com/NestorPlasencia/img/master/Gryffindor.png');
-    color: var(--p11-gryffindor-gold);
+  #Hufflepuff {
+    color: var(--p11-hufflepuff-yellow);
   }
 }
 
-/* Media queries para pantallas pequeñas */
 @media (max-width: 500px) {
   .main_page h1 {
     font-size: var(--p11-font-size-xxl);
@@ -128,10 +124,10 @@
   }
 
   .house_Link {
-    width: 100%; /* Ajustar el ancho de los enlaces de las casas */
+    width: 100%;
   }
 
   .houseFlag {
-    height: 100px; /* Ajustar la altura de las banderas de las casas */
+    height: 100px;
   }
 }
