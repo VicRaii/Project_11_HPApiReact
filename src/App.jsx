@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import './App.css'
 import Houses from './components/Houses/Houses'
 import VideoBG from './components/VideoBG/VideoBG'
 import GryffindorHouse from './pages/GryffindorHouse/GryffindorHouse'

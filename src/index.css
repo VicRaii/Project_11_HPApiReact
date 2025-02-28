@@ -38,15 +38,6 @@
   --p11-gap-xl: 50px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  font-family: 'Harry P', sans-serif;
-}
-
 .flex_className {
   display: flex;
   justify-content: center;

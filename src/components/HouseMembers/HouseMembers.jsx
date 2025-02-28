@@ -9,7 +9,7 @@ const HouseMembers = ({ houseName }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('https://hp-api.herokuapp.com/api/characters')
+    fetch('https://hp-api.onrender.com/api/characters')
       .then((res) => res.json())
       .then((res) => {
         setCharacters(res.filter((character) => character.house === houseName))
