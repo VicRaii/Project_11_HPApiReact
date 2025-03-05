@@ -48,7 +48,7 @@
 .gryffindor_card h1 {
   color: var(--p11-gryffindor-gold);
   text-shadow: 2px 4px 0px rgba(0, 0, 0, 0.55);
-  -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
 .gryffindor .card_front {

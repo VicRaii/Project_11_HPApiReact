@@ -68,6 +68,7 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  position: relative;
 }
 
 .card_front li:nth-child(1) {
@@ -97,6 +98,18 @@
 
 .card_front li:nth-child(2) img:hover {
   transform: scale(1.05);
+}
+
+.hint {
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-size: var(--p11-font-size-s);
+  color: white;
+  padding: var(--p11-padding-s);
+  z-index: 10;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 @keyframes glow {

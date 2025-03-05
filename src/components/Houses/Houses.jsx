@@ -4,9 +4,9 @@ import './Houses.css'
 const Houses = () => {
   return (
     <main className='main_page flex_className'>
-      <h1 className='gradient-text'>Choose Your House</h1>
+      <h1 className='gradient-text text3D'>Choose Your House</h1>
       <section className='container'>
-        <NavLink className='house_Link' to='/GryffindorHouse'>
+        <NavLink className='house_Link ' to='/GryffindorHouse'>
           <div className='houseFlag' id='Gryffindor'>
             <h2>Gryffindor</h2>
           </div>

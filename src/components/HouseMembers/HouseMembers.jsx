@@ -9,14 +9,23 @@ const HouseMembers = ({ houseName }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('https://hp-api.onrender.com/api/characters')
+    fetch(
+      'https://project-11-hp-api-react-backend.vercel.app/api/v1/characters'
+    )
       .then((res) => res.json())
       .then((res) => {
-        setCharacters(res.filter((character) => character.house === houseName))
+        const updatedCharacters = res
+          .filter((character) => character.house === houseName)
+          .map((character, index) => ({
+            ...character,
+            id: character.id || `${houseName}-${index}`
+          }))
+
+        setCharacters(updatedCharacters)
         setLoading(false)
       })
 
-    setTimeout(() => setShowHint(false), 4000)
+    setTimeout(() => setShowHint(false), 5000)
   }, [houseName])
 
   if (loading) {
@@ -30,7 +39,7 @@ const HouseMembers = ({ houseName }) => {
         className={`house_container ${houseName.toLowerCase()}_container flex_className`}
       >
         {characters
-          .filter((character) => character.image || !character.alive)
+          .filter((character) => character.image)
           .map((character) => (
             <CharacterCard
               key={character.id}
