@@ -10,7 +10,8 @@ const HouseMembers = ({ houseName }) => {
 
   useEffect(() => {
     fetch(
-      'https://project-11-hp-api-react-backend.vercel.app/api/v1/characters'
+      'https://project-11-hp-api-react-backend.vercel.app/api/v1/characters',
+      'https://project-11-hp-api-react-backend-git-main-vicraiis-projects.vercel.app/api/v1/characters'
     )
       .then((res) => res.json())
       .then((res) => {
