@@ -9,10 +9,7 @@ const HouseMembers = ({ houseName }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(
-      'https://project-11-hp-api-react-backend.vercel.app/api/v1/characters',
-      'https://project-11-hp-api-react-backend-git-main-vicraiis-projects.vercel.app/api/v1/characters'
-    )
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/characters`)
       .then((res) => res.json())
       .then((res) => {
         const updatedCharacters = res
