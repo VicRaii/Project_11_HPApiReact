@@ -6,6 +6,7 @@ import GryffindorHouse from './pages/GryffindorHouse/GryffindorHouse'
 import HufflepuffHouse from './pages/HufflepuffHouse/HufflepuffHouse'
 import RavenclawHouse from './pages/RavenclawHouse/RavenclawHouse'
 import SlytherinHouse from './pages/SlytherinHouse/SlytherinHouse'
+import Quiz from './pages/Quiz/Quiz'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Houses />} />
+          <Route path='/Quiz' element={<Quiz />} />
           <Route path='/GryffindorHouse' element={<GryffindorHouse />} />
           <Route path='/HufflepuffHouse' element={<HufflepuffHouse />} />
           <Route path='/RavenclawHouse' element={<RavenclawHouse />} />

@@ -1,10 +1,16 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './Houses.css'
 
 const Houses = () => {
   return (
     <main className='main_page flex_className'>
       <h1 className='gradient-text text3D'>Choose Your House</h1>
+
+      <NavLink to='/Quiz' className='quiz flex_className'>
+        <button className='hp-character griffindor'></button>
+        <h3>Quiz</h3>
+      </NavLink>
+
       <section className='container'>
         <NavLink className='house_Link ' to='/GryffindorHouse'>
           <div className='houseFlag' id='Gryffindor'>
