@@ -1,1 +1,158 @@
-/*Add the styles for your component here.*/
+.quiz-container {
+  /* background-color: var(--p11-dark-forest); */
+  color: white;
+  padding: var(--p11-padding-xl);
+  border-radius: 20px;
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  min-height: 90vh;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+/* Header dentro del Quiz */
+.quiz-container h2 {
+  font-size: 2.5rem;
+  color: var(--p11-gryffindor-red);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: var(--p11-margin-m);
+}
+
+/* Score Display */
+.quiz-container .score {
+  padding: var(--p11-padding-s);
+  color: var(--p11-hufflepuff-black);
+  background-color: var(--p11-ravenclaw-bronze);
+  font-size: var(--p11-font-size-xl);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Question inside Quiz */
+.quiz-container .question-text {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  background-color: var(--p11-gryffindor-red);
+  color: var(--p11-gryffindor-gold);
+  padding: var(--p11-padding-s);
+  font-size: var(--p11-font-size-l);
+  border-radius: 10px;
+  margin-bottom: var(--p11-margin-m);
+}
+
+/* Button Styles - Específicos para el Quiz */
+.quiz-container button {
+  background-color: var(--p11-gryffindor-gold);
+  color: var(--p11-gryffindor-red);
+  font-size: var(--p11-font-size-m);
+  padding: var(--p11-padding-s) var(--p11-padding-m);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 40%;
+  max-width: 400px;
+  margin: var(--p11-margin-s);
+}
+
+.quiz-container button:hover {
+  background-color: var(--p11-ravenclaw-bronze);
+  transform: scale(1.05);
+}
+
+.quiz-container button:disabled {
+  background-color: var(--p11-slytherin-silver);
+  cursor: not-allowed;
+}
+
+/* Correct Answer Button (Green) */
+.quiz-container button.correct {
+  background-color: var(--p11-slytherin-green);
+  color: white;
+}
+
+.quiz-container button.correct:hover {
+  background-color: var(--p11-slytherin-green);
+}
+
+/* Incorrect Answer Button (Red) */
+.quiz-container button.incorrect {
+  background-color: var(--p11-gryffindor-red);
+  color: white;
+}
+
+.quiz-container button.incorrect:hover {
+  background-color: #c82333;
+}
+
+/* Loading / Error / Completion States */
+.quiz-container p {
+  font-size: var(--p11-font-size-m);
+  text-align: center;
+  margin-top: var(--p11-margin-m);
+}
+
+.quiz-container .loading,
+.quiz-container .error,
+.quiz-container .completed {
+  font-size: var(--p11-font-size-l);
+  font-weight: bold;
+}
+
+.quiz-container .completed {
+  color: var(--p11-gryffindor-red);
+}
+
+.quiz-container .error {
+  color: var(--p11-slytherin-green);
+}
+
+/* Retroalimentación */
+.quiz-container .feedback {
+  font-size: var(--p11-font-size-m);
+  font-weight: bold;
+  text-align: center;
+  margin-top: var(--p11-margin-m);
+}
+
+.quiz-container .feedback.correct {
+  color: green;
+}
+
+.quiz-container .feedback.incorrect {
+  color: red;
+}
+
+/* Estilo para la pantalla de finalización */
+.quiz-container .quiz-completed {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--p11-hufflepuff-black);
+  margin-top: 2rem;
+}
+
+.quiz-container .quiz-completed span {
+  color: var(--p11-gryffindor-red);
+}
+
+.question-info {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.quiz-container .score-gain {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+  animation: fade-in 0.5s ease-in-out;
+}
