@@ -9,7 +9,7 @@ const INITIAL_STATE = {
   completed: false,
   feedback: '',
   selectedAnswer: null,
-  showFeedback: false // Nuevo estado para mostrar feedback antes de cambiar
+  showFeedback: false
 }
 
 function quizReducer(state, action) {
@@ -28,7 +28,7 @@ function quizReducer(state, action) {
           ? '✅ Correct!'
           : `❌ Incorrect! The correct answer was: ${currentQuestion.answer}`,
         selectedAnswer: action.payload,
-        showFeedback: true // Activa el estado para mostrar el mensaje
+        showFeedback: true
       }
     case 'NEXT_QUESTION':
       if (state.currentIndex + 1 === state.questions.length) {
@@ -39,7 +39,7 @@ function quizReducer(state, action) {
         currentIndex: state.currentIndex + 1,
         feedback: '',
         selectedAnswer: null,
-        showFeedback: false // Reinicia el estado para la siguiente pregunta
+        showFeedback: false
       }
     case 'RESET_QUIZ':
       return { ...INITIAL_STATE, questions: state.questions, isLoading: false }
@@ -65,7 +65,7 @@ export function useQuiz() {
     dispatch({ type: 'ANSWER_QUESTION', payload: answer })
     setTimeout(() => {
       dispatch({ type: 'NEXT_QUESTION' })
-    }, 2500) // Espera 2 segundos antes de avanzar
+    }, 2500)
   }
 
   const resetQuiz = () => {

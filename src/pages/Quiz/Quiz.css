@@ -150,22 +150,74 @@
   transition: all 0.3s;
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-4px);
-  }
-  50% {
-    transform: translateX(4px);
-  }
-  75% {
-    transform: translateX(-4px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.welcome-screen {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--p11-gryffindor-red);
+  z-index: 10;
+}
+
+.welcome-half {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--p11-padding-l);
+  font-family: 'Magic School', cursive;
+  transition: transform 1.8s ease-in-out;
+}
+
+.left {
+  background: var(--p11-gryffindor-red);
+  color: var(--p11-gryffindor-gold);
+  border-right: 2px solid var(--p11-gryffindor-gold);
+}
+
+.right {
+  background: var(--p11-gryffindor-gold);
+  color: var(--p11-gryffindor-red);
+}
+
+.welcome-half h1 {
+  font-size: var(--p11-font-size-xl);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.welcome-text {
+  font-size: var(--p11-font-size-m);
+  font-weight: bold;
+  padding: var(--p11-padding-s);
+  border-radius: 10px;
+}
+
+.start-button {
+  margin-top: var(--p11-margin-m);
+  padding: var(--p11-padding-m);
+  font-size: var(--p11-font-size-l);
+  background-color: var(--p11-gryffindor-red);
+  color: var(--p11-gryffindor-gold);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: var(--p11-gryffindor-gold);
+  color: var(--p11-gryffindor-red);
+  transform: scale(1.05);
 }
 
 @media (max-width: 500px) {
@@ -195,5 +247,37 @@
 
   .feedback-message {
     font-size: var(--p11-font-size-l);
+  }
+
+  .welcome-screen {
+    flex-direction: column;
+  }
+
+  .welcome-half {
+    width: 100%;
+    height: 50%;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 2px solid var(--p11-gryffindor-gold);
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-4px);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+    75% {
+      transform: translateX(-4px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 }
