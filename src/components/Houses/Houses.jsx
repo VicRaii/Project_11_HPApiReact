@@ -8,7 +8,6 @@ const Houses = () => {
 
       <NavLink to='/Quiz' className='quiz flex_className'>
         <button className='hp-character griffindor'></button>
-        <h3>Quiz</h3>
       </NavLink>
 
       <section className='container'>

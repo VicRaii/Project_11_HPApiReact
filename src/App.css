@@ -6,3 +6,7 @@
   text-decoration: none;
   font-family: 'Harry P', sans-serif;
 }
+
+.app-container {
+  height: 100vh;
+}

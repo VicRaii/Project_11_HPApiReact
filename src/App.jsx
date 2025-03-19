@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <VideoBG />
-      <div>
+      <div className='app-container'>
         <Routes>
           <Route path='/' element={<Houses />} />
           <Route path='/Quiz' element={<Quiz />} />

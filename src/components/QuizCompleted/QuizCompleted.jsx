@@ -8,8 +8,8 @@ function QuizCompleted({ score, onRestart }) {
       <Confetti />
       <h1>Congrats !</h1>
       <h2>Quiz completed !</h2>
-      <p>
-        Your final Score is: <span>{score}</span> Bertie Botts Beans
+      <p className='congrats-message'>
+        You won <span>{score}</span> Bertie Botts Beans
       </p>
       <button className='restart-button' onClick={onRestart}>
         Restart Quiz

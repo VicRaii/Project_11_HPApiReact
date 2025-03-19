@@ -3,9 +3,13 @@ import { useQuiz } from '../../customHooks/useQuiz'
 import Question from './Question'
 import { useEffect } from 'react'
 import { toast } from 'sonner'
+import { useNavigate } from 'react-router-dom'
+import { ArrowLeft } from 'lucide-react' // Icono de flecha
 import './Quiz.css'
 
 const Quiz = () => {
+  const navigate = useNavigate()
+
   const {
     questions,
     currentIndex,
@@ -30,8 +34,16 @@ const Quiz = () => {
   if (completed) return <QuizCompleted score={score} onRestart={resetQuiz} />
 
   return (
-    <div className='quiz-container'>
-      <h2 className='text3D'>Harry Potter Quiz</h2>
+    <div className='quiz-container flex-className'>
+      {/* Botón para volver al menú */}
+      <button
+        className='back-button flex-className'
+        onClick={() => navigate('/')}
+      >
+        <ArrowLeft /> Back
+      </button>
+
+      <h2 className='text3D'>Potterhead Quiz</h2>
       <p className='score'>Score: {score}</p>
       <p>
         Question {currentIndex + 1} of {questions.length}

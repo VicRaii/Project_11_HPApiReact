@@ -27,10 +27,11 @@
   position: absolute;
   top: 20px;
   left: 20px;
+  margin: 0 auto;
 }
 
 .hp-character {
-  width: 100px;
+  width: 70px;
   aspect-ratio: 1/1;
   border-radius: 20%;
   box-shadow: 0 1vmin 4vmin;

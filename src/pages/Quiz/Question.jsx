@@ -15,19 +15,17 @@ function Question({ question, onAnswer, selectedAnswer }) {
     onAnswer(selectedOption)
   }
 
-  const getButtonClass = (option) => {
+  const getFeedbackMessage = () => {
     if (!isAnswered) return ''
-    if (option === question.answer) return 'correct'
-    if (option === selectedAnswer && option !== question.answer)
-      return 'incorrect'
-    return ''
+    return selectedAnswer === question.answer
+      ? `✅ Correct! Well done! +${question.points} points`
+      : `❌ Incorrect! The correct answer was: ${question.answer}`
   }
 
   return (
-    <div>
-      <p className='question-info'>
-        Level: {question.level} | +{question.points} points
-      </p>
+    <div className='flex-className '>
+      <p className='question-info'>Level {question.level}</p>
+      <p className='question-info'>Value: +{question.points} points</p>
       <h2 className='question-text'>{question.question}</h2>
       <div className='options-container'>
         {question.options.map((option, index) => (
@@ -35,12 +33,23 @@ function Question({ question, onAnswer, selectedAnswer }) {
             key={index}
             onClick={() => handleAnswer(option)}
             disabled={isAnswered}
-            className={getButtonClass(option)}
+            className={`quiz-option ${
+              isAnswered && option === question.answer ? 'correct' : ''
+            } ${isAnswered && option !== question.answer ? 'incorrect' : ''}`}
           >
             {option}
           </button>
         ))}
       </div>
+      {isAnswered && (
+        <p
+          className={`feedback-message ${
+            selectedAnswer === question.answer ? 'correct' : 'incorrect'
+          }`}
+        >
+          {getFeedbackMessage()}
+        </p>
+      )}
     </div>
   )
 }
