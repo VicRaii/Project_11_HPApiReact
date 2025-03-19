@@ -1,5 +1,4 @@
 .quiz-container {
-  color: white;
   padding: var(--p11-padding-l);
   width: 85%;
   height: 100%;
@@ -37,11 +36,12 @@
   width: 45%;
   margin: 10px auto;
   padding: var(--p11-padding-s);
-  color: white;
+  color: var(--p11-ravenclaw-blue);
   background: var(--p11-ravenclaw-bronze);
   font-size: var(--p11-font-size-m);
   font-weight: bold;
   border-radius: 10px;
+  letter-spacing: 1px;
 }
 
 .question-info {
@@ -158,7 +158,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--p11-gryffindor-red);
   z-index: 10;
 }
 
@@ -178,45 +177,48 @@
 .left {
   background: var(--p11-gryffindor-red);
   color: var(--p11-gryffindor-gold);
+  -webkit-text-stroke: 0.001px var(--p11-gryffindor-red);
   border-right: 2px solid var(--p11-gryffindor-gold);
 }
 
 .right {
   background: var(--p11-gryffindor-gold);
-  color: var(--p11-gryffindor-red);
+  color: var(--p11-gryffindor-gold);
+  -webkit-text-stroke: 0.1px var(--p11-gryffindor-red);
 }
 
 .welcome-half h1 {
   font-size: var(--p11-font-size-xl);
   text-transform: uppercase;
   letter-spacing: 3px;
+  line-height: 1.4;
 }
 
 .welcome-text {
-  font-size: var(--p11-font-size-m);
+  font-size: var(--p11-font-size-xl);
   font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.2;
   padding: var(--p11-padding-s);
-  border-radius: 10px;
 }
 
 .start-button {
   margin-top: var(--p11-margin-m);
   padding: var(--p11-padding-m);
-  font-size: var(--p11-font-size-l);
+  font-size: var(--p11-font-size-xl);
   background-color: var(--p11-gryffindor-red);
   color: var(--p11-gryffindor-gold);
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
   letter-spacing: 1px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
 .start-button:hover {
   background-color: var(--p11-gryffindor-gold);
   color: var(--p11-gryffindor-red);
+  border: 2px solid var(--p11-gryffindor-red);
   transform: scale(1.05);
 }
 
@@ -240,6 +242,9 @@
 
   .back-button {
     width: 100%;
+    top: auto;
+    bottom: 0;
+    z-index: 10;
     font-size: var(--p11-font-size-l);
     padding: var(--p11-margin-s);
     justify-content: center;

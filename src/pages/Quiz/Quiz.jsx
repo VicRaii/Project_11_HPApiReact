@@ -6,6 +6,7 @@ import { ArrowLeft } from 'lucide-react'
 import QuizCompleted from '../../components/QuizCompleted/QuizCompleted'
 import { useQuiz } from '../../customHooks/useQuiz'
 import Question from './Question'
+import Loading from '../../components/Loading/Loading'
 import './Quiz.css'
 
 const Quiz = () => {
@@ -32,7 +33,12 @@ const Quiz = () => {
     }
   }, [feedback])
 
-  if (isLoading) return <p className='loading'>Loading questions...</p>
+  if (isLoading)
+    return (
+      <Loading>
+        <p>Loading question...</p>
+      </Loading>
+    )
   if (error) return <p className='error'>Error: {error}</p>
   if (completed) return <QuizCompleted score={score} onRestart={resetQuiz} />
 
@@ -48,15 +54,15 @@ const Quiz = () => {
           <motion.div
             className='welcome-half left'
             animate={animateExit ? { x: '-100vw' } : { x: 0 }}
-            transition={{ duration: 1.8, ease: 'easeInOut', delay: 0.1 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
           >
-            <h1 className='text3D'>Welcome to the Potterhead Quiz! ⚡</h1>
+            <h1 className='text3D'>Welcome to the Potterhead Quiz ⚡</h1>
           </motion.div>
 
           <motion.div
             className='welcome-half right'
             animate={animateExit ? { x: '100vw' } : { x: 0 }}
-            transition={{ duration: 1.8, ease: 'easeInOut', delay: 0.1 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
           >
             <p className='welcome-text'>
               Show how much you know about the magical world of Harry Potter.
@@ -67,10 +73,10 @@ const Quiz = () => {
               whileTap={{ scale: 0.9 }}
               onClick={() => {
                 setAnimateExit(true)
-                setTimeout(() => setShowWelcome(false), 2800)
+                setTimeout(() => setShowWelcome(false), 2400)
               }}
             >
-              Start! 🧙‍♂️
+              Start 🧙‍♂️
             </motion.button>
           </motion.div>
         </motion.div>
@@ -102,3 +108,5 @@ const Quiz = () => {
 }
 
 export default Quiz
+
+//! COMPONETIZAR Y COMPROBAR RE-RENDERIZACIONES INNECESARIAS

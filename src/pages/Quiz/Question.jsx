@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Loading from '../../components/Loading/Loading'
 
 function Question({ question, onAnswer, selectedAnswer }) {
   const [isAnswered, setIsAnswered] = useState(false)
@@ -7,7 +8,12 @@ function Question({ question, onAnswer, selectedAnswer }) {
     setIsAnswered(false)
   }, [question])
 
-  if (!question) return <p>Loading question...</p>
+  if (!question)
+    return (
+      <Loading>
+        <p>Loading question...</p>
+      </Loading>
+    )
 
   const handleAnswer = (selectedOption) => {
     if (isAnswered) return
