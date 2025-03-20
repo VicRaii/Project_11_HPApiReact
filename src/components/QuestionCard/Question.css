@@ -1,0 +1,129 @@
+.quiz-container > h2 {
+  font-size: 3.5rem;
+  color: var(--p11-gryffindor-red);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.quiz-container > div h2 {
+  font-size: var(--p11-font-size-l);
+  color: var(--p11-gryffindor-gold);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.score {
+  width: 45%;
+  margin: 10px auto;
+  padding: var(--p11-padding-s);
+  color: var(--p11-ravenclaw-blue);
+  background: var(--p11-ravenclaw-bronze);
+  font-size: var(--p11-font-size-m);
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.feedback-message {
+  margin-top: var(--p11-margin-m);
+  padding: var(--p11-padding-s);
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: var(--p11-font-size-xl);
+}
+
+.feedback-message.correct {
+  background-color: rgba(22, 118, 22, 0.495);
+  color: white;
+}
+
+.feedback-message.incorrect {
+  background: rgba(231, 33, 33, 0.332);
+  color: white;
+}
+
+.question-info {
+  width: 70%;
+  margin: 10px auto;
+  padding: var(--p11-padding-xs);
+  background: rgba(0, 0, 0, 0.5);
+  font-size: var(--p11-font-size-l);
+  font-weight: bold;
+  border-radius: 10px;
+  color: var(--p11-gryffindor-gold);
+}
+
+.question-text {
+  width: 75%;
+  margin: 10px auto;
+  padding: var(--p11-padding-m);
+  background: var(--p11-gryffindor-red);
+  color: var(--p11-gryffindor-gold);
+  font-size: var(--p11-font-size-m);
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--p11-margin-m);
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.quiz-option {
+  background: var(--p11-gryffindor-gold);
+  font-size: var(--p11-font-size-m);
+  padding: var(--p11-padding-s);
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 40%;
+  max-width: 280px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-option:hover {
+  background: var(--p11-gryffindor-gold);
+  transform: scale(1.05);
+}
+
+.quiz-option.correct {
+  background: var(--p11-slytherin-green) !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.quiz-option.incorrect {
+  background: var(--p11-gryffindor-red) !important;
+  color: white !important;
+  font-weight: bold;
+  animation: shake 0.3s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .quiz-container {
+    width: 100%;
+    padding: var(--p11-padding-m);
+  }
+
+  h2.text3D {
+    font-size: var(--p11-font-size-xl);
+  }
+
+  .quiz-container > div h2 {
+    width: 100%;
+    font-size: var(--p11-font-size-s);
+  }
+
+  .feedback-message {
+    font-size: var(--p11-font-size-l);
+  }
+}

@@ -16,117 +16,6 @@
   position: relative;
 }
 
-.quiz-container > h2 {
-  font-size: 3.5rem;
-  color: var(--p11-gryffindor-red);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.quiz-container > div h2 {
-  font-size: var(--p11-font-size-l);
-  color: var(--p11-gryffindor-gold);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.score {
-  width: 45%;
-  margin: 10px auto;
-  padding: var(--p11-padding-s);
-  color: var(--p11-ravenclaw-blue);
-  background: var(--p11-ravenclaw-bronze);
-  font-size: var(--p11-font-size-m);
-  font-weight: bold;
-  border-radius: 10px;
-  letter-spacing: 1px;
-}
-
-.question-info {
-  width: 70%;
-
-  margin: 10px auto;
-  padding: var(--p11-padding-xs);
-  background: rgba(0, 0, 0, 0.5);
-  font-size: var(--p11-font-size-l);
-  font-weight: bold;
-  border-radius: 10px;
-  color: var(--p11-gryffindor-gold);
-}
-
-.question-text {
-  width: 75%;
-  margin: 10px auto;
-  padding: var(--p11-padding-m);
-  background: var(--p11-gryffindor-red);
-  color: var(--p11-gryffindor-gold);
-  font-size: var(--p11-font-size-m);
-  border-radius: 10px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-}
-
-.options-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--p11-margin-m);
-  margin-top: 1rem;
-  overflow: hidden;
-}
-
-.quiz-option {
-  background: var(--p11-gryffindor-gold);
-  font-size: var(--p11-font-size-m);
-  padding: var(--p11-padding-s);
-  letter-spacing: 1px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  width: 40%;
-  max-width: 280px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.quiz-option:hover {
-  background: var(--p11-gryffindor-gold);
-  transform: scale(1.05);
-}
-
-.quiz-option.correct {
-  background: var(--p11-slytherin-green) !important;
-  color: white !important;
-  font-weight: bold;
-}
-
-.quiz-option.incorrect {
-  background: var(--p11-gryffindor-red) !important;
-  color: white !important;
-  font-weight: bold;
-  animation: shake 0.3s ease-in-out;
-}
-
-.feedback-message {
-  margin-top: var(--p11-margin-m);
-  padding: var(--p11-padding-s);
-  border-radius: 10px;
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: var(--p11-font-size-xl);
-}
-
-.feedback-message.correct {
-  background-color: rgba(22, 118, 22, 0.495);
-  color: white;
-}
-
-.feedback-message.incorrect {
-  background: rgba(231, 33, 33, 0.332);
-  color: white;
-}
-
 .back-button {
   position: absolute;
   top: 0;
@@ -150,96 +39,7 @@
   transition: all 0.3s;
 }
 
-.welcome-screen {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.welcome-half {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: var(--p11-padding-l);
-  font-family: 'Magic School', cursive;
-  transition: transform 1.8s ease-in-out;
-}
-
-.left {
-  background: var(--p11-gryffindor-red);
-  color: var(--p11-gryffindor-gold);
-  -webkit-text-stroke: 0.001px var(--p11-gryffindor-red);
-  border-right: 2px solid var(--p11-gryffindor-gold);
-}
-
-.right {
-  background: var(--p11-gryffindor-gold);
-  color: var(--p11-gryffindor-gold);
-  -webkit-text-stroke: 0.1px var(--p11-gryffindor-red);
-}
-
-.welcome-half h1 {
-  font-size: var(--p11-font-size-xl);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 1.4;
-}
-
-.welcome-text {
-  font-size: var(--p11-font-size-xl);
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 1.2;
-  padding: var(--p11-padding-s);
-}
-
-.start-button {
-  margin-top: var(--p11-margin-m);
-  padding: var(--p11-padding-m);
-  font-size: var(--p11-font-size-xl);
-  background-color: var(--p11-gryffindor-red);
-  color: var(--p11-gryffindor-gold);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: all 0.3s ease-in-out;
-}
-
-.start-button:hover {
-  background-color: var(--p11-gryffindor-gold);
-  color: var(--p11-gryffindor-red);
-  border: 2px solid var(--p11-gryffindor-red);
-  transform: scale(1.05);
-}
-
 @media (max-width: 500px) {
-  .quiz-container {
-    width: 100%;
-    padding: var(--p11-padding-m);
-  }
-
-  h2.text3D {
-    font-size: var(--p11-font-size-xl);
-  }
-
-  .quiz-container > div h2 {
-    width: 99%;
-    font-size: var(--p11-font-size-m);
-    line-height: 1.4;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
   .back-button {
     width: 100%;
     top: auto;
@@ -249,40 +49,22 @@
     padding: var(--p11-margin-s);
     justify-content: center;
   }
+}
 
-  .feedback-message {
-    font-size: var(--p11-font-size-l);
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
-
-  .welcome-screen {
-    flex-direction: column;
+  25% {
+    transform: translateX(-4px);
   }
-
-  .welcome-half {
-    width: 100%;
-    height: 50%;
+  50% {
+    transform: translateX(4px);
   }
-
-  .left {
-    border-right: none;
-    border-bottom: 2px solid var(--p11-gryffindor-gold);
+  75% {
+    transform: translateX(-4px);
   }
-
-  @keyframes shake {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-4px);
-    }
-    50% {
-      transform: translateX(4px);
-    }
-    75% {
-      transform: translateX(-4px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
   }
 }
