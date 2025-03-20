@@ -13,7 +13,7 @@ const HouseMembers = ({ houseName }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/v1/characters`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/`)
       .then((res) => res.json())
       .then((res) => {
         const updatedCharacters = res
