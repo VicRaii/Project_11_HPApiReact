@@ -58,8 +58,6 @@ export function useQuiz() {
     fetch(`${import.meta.env.VITE_API_URL}/api/v1/questions`, {
       signal: controller.signal
     })
-    console
-      .log(import.meta.env.VITE_API_URL)
       .then((res) => {
         if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`)
         return res.json()
