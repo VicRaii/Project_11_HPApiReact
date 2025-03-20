@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
-import { ArrowLeft } from 'lucide-react'
 import QuizCompleted from '../../components/QuizCompleted/QuizCompleted'
 import { useQuiz } from '../../customHooks/useQuiz'
 import Question from '../../components/QuestionCard/Question'
 import Loading from '../../components/Loading/Loading'
 import WelcomeScreen from '../../components/WelcomeScreen/WelcomeScreen'
 import './Quiz.css'
+import BackButton from '../../components/BackButton/BackButton'
 
 const Quiz = () => {
   const navigate = useNavigate()
@@ -53,12 +53,7 @@ const Quiz = () => {
         <WelcomeScreen onStart={handleStartQuiz} />
       ) : (
         <>
-          <button
-            className='back-button flex-className'
-            onClick={handleNavigate}
-          >
-            <ArrowLeft /> Back
-          </button>
+          <BackButton onClick={handleNavigate} />{' '}
           <h2 className='text3D'>Potterhead Quiz</h2>
           <p className='score'>Score: {score}</p>
           <p className='question-info'>
