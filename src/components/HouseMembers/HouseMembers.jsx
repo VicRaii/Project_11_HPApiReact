@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
 import './HouseMembers.css'
 import CharacterCard from '../CharacterCard/CharacterCard'
 import Loading from '../Loading/Loading'
 import { ArrowLeft } from 'lucide-react'
-
-const API_BASE_URL = import.meta.env.VITE_API_URL
+import { useNavigate } from 'react-router-dom'
 
 const HouseMembers = ({ houseName }) => {
   const [characters, setCharacters] = useState([])
@@ -13,38 +11,24 @@ const HouseMembers = ({ houseName }) => {
   const [loading, setLoading] = useState(true)
 
   const navigate = useNavigate()
-  const location = useLocation()
 
   useEffect(() => {
-    let endpoint = ''
-
-    if (location.pathname.includes('/characters')) {
-      endpoint = `${API_BASE_URL}/api/v1/characters`
-    } else if (location.pathname.includes('/questions')) {
-      endpoint = `${API_BASE_URL}/api/v1/questions`
-    } else {
-      return
-    }
-
-    fetch(endpoint)
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/questions`)
       .then((res) => res.json())
       .then((res) => {
-        const updatedData = res
-          .filter((item) => item.house === houseName) // Filtrar por casa
-          .map((item, index) => ({
-            ...item,
-            id: item.id || `${houseName}-${index}`
+        const updatedCharacters = res
+          .filter((character) => character.house === houseName)
+          .map((character, index) => ({
+            ...character,
+            id: character.id || `${houseName}-${index}`
           }))
 
-        setCharacters(updatedData)
+        setCharacters(updatedCharacters)
         setLoading(false)
       })
-      .catch((error) => console.error('Error fetching data:', error))
 
-    const hintTimeout = setTimeout(() => setShowHint(false), 5000)
-
-    return () => clearTimeout(hintTimeout) // Cleanup
-  }, [houseName, location.pathname]) // Se ejecuta cuando cambia `houseName` o la ruta
+    setTimeout(() => setShowHint(false), 5000)
+  }, [houseName])
 
   if (loading) {
     return <Loading />
