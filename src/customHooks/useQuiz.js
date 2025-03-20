@@ -55,9 +55,11 @@ export function useQuiz() {
 
   useEffect(() => {
     const controller = new AbortController()
-    fetch('http://localhost:3000/api/v1/questions', {
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/characters`, {
       signal: controller.signal
     })
+    console
+      .log(import.meta.env.VITE_API_URL)
       .then((res) => {
         if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`)
         return res.json()
